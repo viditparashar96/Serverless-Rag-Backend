@@ -22,10 +22,10 @@ export const chatWithPdf = async (
   const config = {
     postgresConnectionOptions: {
       type: "postgres",
-      host: "ep-steep-bar-a14o80pi.ap-southeast-1.aws.neon.tech",
-      user: "ragdb_owner",
-      password: "nVOPtbJ7X6CM",
-      database: "vectordb",
+      host: c.env.PGHOST,
+      user: c.env.PGUSER,
+      password: c.env.PGPASSWORD,
+      database: c.env.PGDATABASE,
       ssl: {
         rejectUnauthorized: false,
       },
